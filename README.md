@@ -35,6 +35,7 @@ A new Flutter project for Flavor pactice .
 ---
 
 ## Getting Started
+https://www.youtube.com/watch?v=4Y7WaeU3P60
 
 This project is a starting point for a Flutter application.
 
