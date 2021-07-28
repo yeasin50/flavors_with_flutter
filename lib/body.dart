@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'screens/main.screens.dart';
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
