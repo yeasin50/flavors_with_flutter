@@ -18,14 +18,14 @@ void mainCommon(FlavorConfig config) {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final config = context.read(flavorConfigProvider);
+    // final config = context.read(flavorConfigProvider);
 
     return MaterialApp(
-      title: config.state.appTitle,
-      theme: config.state.theme,
+      // title: config.state.appTitle,
+      // theme: config.state.theme,
       home: Scaffold(
         appBar: AppBar(
-          title: Text(config.state.appTitle),
+          title: Text("title"),
         ),
         body: MainScreen(),
       ),
