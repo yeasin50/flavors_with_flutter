@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'screens/main.screens.dart';
 
-var flavorConfigProvider;
+late final flavorConfigProvider;
 
 void mainCommon(FlavorConfig config) {
   flavorConfigProvider = StateProvider((ref) => config);
