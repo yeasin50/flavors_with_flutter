@@ -1,6 +1,6 @@
 # flavor_with_flutter
 
-A new Flutter project for Flavor pactice .
+A new Flutter project for Flavor, Test and ... pactice.
 
 - run using terminal
   ```console
