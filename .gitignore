@@ -33,7 +33,8 @@
 
 build/*
 # to publish web-build
-# !/build/web
+
+!/build/web
 
 
 # Web related
