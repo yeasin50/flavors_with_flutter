@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'body.dart';
-import 'screens/main.screens.dart';
 
 late final flavorConfigProvider;
 
@@ -15,4 +14,3 @@ void mainCommon(FlavorConfig config) {
     ),
   );
 }
-

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   final alphaConfig = FlavorConfig()
-    ..appTitle = "Prod"
+    ..appTitle = "Production"
     ..imagePath = 'assets/icons/alpha.png'
     ..theme = ThemeData.light().copyWith(
       primaryColor: Colors.cyanAccent,

@@ -1,6 +1,7 @@
-import 'package:flavor_with_flutter/configs/flavor_config.dart';
-import 'package:flavor_with_flutter/main_common.dart';
 import 'package:flutter/material.dart';
+
+import 'configs/flavor_config.dart';
+import 'main_common.dart';
 
 void main() {
   final betaConfig = FlavorConfig()
