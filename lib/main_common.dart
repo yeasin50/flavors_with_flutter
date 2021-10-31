@@ -6,7 +6,8 @@ import 'body.dart';
 
 late final flavorConfigProvider;
 
-void mainCommon(FlavorConfig config) {
+void mainCommon(FlavorConfig config) async {
+  String arg = const String.fromEnvironment('simple');
   flavorConfigProvider = StateProvider((ref) => config);
   runApp(
     ProviderScope(
