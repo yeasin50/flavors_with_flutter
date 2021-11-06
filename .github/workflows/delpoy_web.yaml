@@ -1,19 +1,29 @@
-name: Gh-Pages
-
+name: Flutter Web and delpoy GitHub-Page
 on:
   push:
-    branches: [ master ]
-
+    branches:
+      - master
 jobs:
   build:
+    name: Build Web
+    env:
+      my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2 # Only works with v2
+      - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
-      - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          workingDir: example
-          webRenderer: html
-          targetBranch: my-gh-pages-branch
-          baseHref: /my-repo/
+          channel: 'stable'
+      - run: flutter pub get
+      - run: flutter build web --release
+      - run: |
+          cd build/web
+          git init 
+          # git config --global user.email yeasinsheikh50@gmail.com
+          # git config --global user.name yeasin50
+          git status
+          git remote add origin https://${{secrets.COMMIT_SECRET}}@github.com/Adrieldf/allthewidgets.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
