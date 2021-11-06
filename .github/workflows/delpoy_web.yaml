@@ -19,8 +19,8 @@ jobs:
       - run: |
           cd build/web
           git init 
-          # git config --global user.email yeasinsheikh50@gmail.com
-          # git config --global user.name yeasin50
+          git config --global user.email yeasinsheikh50@gmail.com
+          git config --global user.name yeasin50
           git status
           git remote add origin https://${{secrets.COMMIT_SECRET}}@github.com/Adrieldf/allthewidgets.git
           git checkout -b gh-pages
