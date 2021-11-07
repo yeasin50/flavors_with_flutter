@@ -1,4 +1,4 @@
-name: Flutter Web and delpoy GitHub-Page
+name: Flutter Web
 on:
   push:
     branches:
@@ -10,19 +10,20 @@ jobs:
       my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.1
       - uses: subosito/flutter-action@v1
-        # with:
-        #   channel: 'stable'
+      #   with:
+      #     channel: 'stable'
+      # - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter build web --release
       - run: |
           cd build/web
-          git init 
+          git init
           git config --global user.email yeasinsheikh50@gmail.com
           git config --global user.name yeasin50
           git status
-          git remote add origin https://${{secrets.commit_secret}}@https://github.com/yeasin50/flavors_with_flutter.git
+          git remote add origin https://${{secrets.commit_secret}}@github.com/onatcipli/flutter_web.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
